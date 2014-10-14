@@ -1,3 +1,4 @@
+//Test 2, modification
 package project.se3354.sms_messenger_group8;
 
 import android.support.v7.app.ActionBarActivity;
