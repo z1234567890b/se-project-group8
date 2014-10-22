@@ -18,7 +18,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        
+        //this is a test
         TextView sms_tv = (TextView) findViewById(R.id.sms_tv);
         Button send_btn = (Button) findViewById(R.id.send_btn);
         send_btn.setOnClickListener(MainActivity.this);
