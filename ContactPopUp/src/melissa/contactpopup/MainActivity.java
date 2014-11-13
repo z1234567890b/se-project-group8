@@ -53,6 +53,17 @@ public class MainActivity extends Activity implements OnClickListener{
 	
 	@SuppressWarnings("deprecation")
 	public void popupInit() { 
+		
+		//Use this to make a button visible/invisible based on if there is something typed in? Can
+		//show menu underneath button when selected... This would solve the need to have a button 
+		//to trigger the menu problem I'm currently having
+		
+		//Set button invisible originally (can do in graphical xml view) and set visible when unknown
+		//number is typed in?
+		
+		//popupButton.setVisibility(4); //Invisible = constant value 4
+									  //Visible = constant value 0
+	
 		popupButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
