@@ -1,6 +1,7 @@
 package melissa.contactpopup;
 
 import android.app.Activity; 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle; 
 import android.provider.Contacts.Intents;
@@ -30,8 +31,8 @@ public class MainActivity extends Activity implements OnClickListener{
 	public void init() {
 		popupButton = (Button) findViewById(R.id.popupbutton); 
 		popupText = new TextView(this); 
-		insidePopupButton1 = new Button(this);
-		insidePopupButton2 = new Button(this);
+		insidePopupButton1 = new Button (this);
+		insidePopupButton2 = new Button (this);
 		layoutOfPopup = new LinearLayout(this); 
 		insidePopupButton1.setText("Yes"); 
 		insidePopupButton2.setText("No");
@@ -60,9 +61,12 @@ public class MainActivity extends Activity implements OnClickListener{
 			//if yes is selected
 			//dismiss popup
 			//call intent and pass it the number that was typed
-			Intent intent = new Intent(Intents.Insert.ACTION);
-			intent.setType(ContactsContract.RawContacts.CONTENT_TYPE);
-			intent.putExtra(Intents.Insert.PHONE, "4693968024");
+			Intent intent = new Intent(Intent.ACTION_INSERT, ContactsContract.Contacts.CONTENT_URI);
+			//Below is where you would put the textbox name for the box you're using
+			//and tell it to get the text
+			intent.putExtra(Intents.Insert.PHONE, "469-396-8024");
+			startActivity(intent);
+			
 			popupMessage.dismiss();
 		}
 	}

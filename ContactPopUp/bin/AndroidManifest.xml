@@ -3,7 +3,8 @@
     package="melissa.contactpopup"
     android:versionCode="1"
     android:versionName="1.0" >
-
+	<uses-permission 
+	    android:name = "android.permission.WRITE_CONTACTS"/>
     <uses-sdk
         android:minSdkVersion="21"
         android:targetSdkVersion="21" />
